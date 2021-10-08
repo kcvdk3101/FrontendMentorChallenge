@@ -1,0 +1,138 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --pale-2-blue: hsla(225, 100%, 94%, 20%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  --very-pale-blue: hsl(245, 75%, 52%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  --white-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Button */
+.btn {
+  cursor: pointer;
+  width: 100%;
+  background-color: var(--very-pale-blue);
+  box-shadow: 0px 10px 30px var(--desaturated-blue);
+  border: none;
+  outline: none;
+  padding: 1rem 0rem;
+  border-radius: 15px;
+  font-weight: 700;
+  color: var(--white-color);
+  margin: 5px 0px;
+}
+
+.btn--cancel {
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--desaturated-blue);
+}
+
+/* Background */
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--pale-blue) url("/images/pattern-background-desktop.svg")
+    no-repeat left top;
+  background-size: contain;
+  min-height: 97vh;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 400px;
+  height: 600px;
+  box-shadow: 0px 8px 50px var(--desaturated-blue);
+  border-radius: 20px;
+}
+
+.card__image {
+  flex-shrink: 0;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card__body {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  background-color: var(--white-color);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.card__title {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.card__text {
+  width: 70%;
+  color: var(--desaturated-blue);
+  line-height: 24px;
+}
+
+.card__plan {
+  width: 80%;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--pale-2-blue);
+  padding: 1rem 0;
+  border-radius: 10px;
+}
+
+.card__plan .card__plan--text {
+  margin-right: 40px;
+  color: var(--desaturated-blue);
+}
+
+.card__plan .card__plan--text span {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.card__plan .card__plan--link {
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.card__buttons {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 80%;
+}
+
+/* Footer */
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  background: var(--pale-blue);
+}
+
+.attribution a {
+  color: var(--dark-blue);
+}
