@@ -72,6 +72,7 @@ p {
 .banner__right {
   position: relative;
   flex: 1;
+  display: flex;
   background: url("./images/image-header-desktop.jpg") no-repeat right top;
   background-size: contain;
 }
@@ -111,17 +112,4 @@ p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-/* === Mobile === */
-
-@media screen and (max-width: 374px) {
-  .banner {
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: var(--desaturated-blue);
-  }
 }
