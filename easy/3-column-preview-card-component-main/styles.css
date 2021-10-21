@@ -1,0 +1,120 @@
+:root {
+  --first-card-color: hsl(31, 77%, 52%);
+  --second-card-color: hsl(184, 100%, 22%);
+  --third-card-color: hsl(179, 100%, 13%);
+
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+  --heading: hsl(0, 0%, 95%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  background-color: var(--heading);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Big Shoulders Display", cursive;
+}
+
+/* Mobile */
+.container {
+  margin: 60px 20px;
+}
+
+.card {
+  padding: 50px;
+}
+
+.card--sedans {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: var(--first-card-color);
+}
+.card--suvs {
+  background-color: var(--second-card-color);
+}
+.card--luxury {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--third-card-color);
+}
+
+.card__heading {
+  text-transform: uppercase;
+  font-size: 36px;
+  color: var(--heading);
+}
+
+.card__para {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--paragraph);
+}
+
+.btn {
+  background-color: var(--heading);
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.card__button--sedans {
+  color: var(--first-card-color);
+}
+
+.card__button--suvs {
+  color: var(--second-card-color);
+}
+
+.card__button--luxury {
+  color: var(--third-card-color);
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+  }
+
+  .container {
+    padding: 0px;
+    display: inline-flex;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 400px;
+  }
+
+  .card--sedans {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+  .card--luxury {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .btn {
+    width: 80%;
+    margin-top: auto;
+  }
+}
